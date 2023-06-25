@@ -7,7 +7,6 @@ body {
   background-size: cover;
 }
 
-
 .app {
   max-width: 600px;
   margin: 0 auto 300px;
@@ -30,4 +29,54 @@ p {
 
 input {
   box-sizing: border-box;
+}
+
+button {
+  background-color: brown;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  opacity: 0.8;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+button:hover {
+  opacity: 1;
+}
+
+.todo-list {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #555;
+}
+
+.todo {
+  background-color: blue;
+  box-shadow: 0 0 10px black;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+.complete {
+  background-color: green;
+}
+.remove {
+  background-color: #d953af;
+}
+.task-form {
+  padding-bottom: 1.5rem;
+}
+
+input,
+select {
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  width: 100%;
 }
