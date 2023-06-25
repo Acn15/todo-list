@@ -30,7 +30,7 @@ const TodoForm = ({ addTask }) => {
           <option value="Pessoal">Pessoal</option>
           <option value="Estudos">Estudos</option>
         </select>
-        <button type="submit">Criar tarefa</button>
+        <button type="submit">Create a task</button>
       </form>
     </div>
   );
