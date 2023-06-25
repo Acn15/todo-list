@@ -1,4 +1,4 @@
-const Todo = ({ item }) => {
+const Todo = ({ item, removeTask }) => {
   return (
     <div className="todo">
       <div className="content">
@@ -7,7 +7,9 @@ const Todo = ({ item }) => {
       </div>
       <>
         <button className="complete">Completar</button>
-        <button className="remove">Delete</button>
+        <button className="remove" onClick={() => removeTask(item.id)}>
+          Delete
+        </button>
       </>
     </div>
   );
