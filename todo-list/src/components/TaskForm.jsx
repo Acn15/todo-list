@@ -26,9 +26,9 @@ const TodoForm = ({ addTask }) => {
         />
         <select value={category} onChange={(e) => setCategory(e.target.value)}>
           <option value="">Select a category</option>
-          <option value="Trabalho">Trabalho</option>
-          <option value="Pessoal">Pessoal</option>
-          <option value="Estudos">Estudos</option>
+          <option value="Work">Work</option>
+          <option value="Personal">Personal</option>
+          <option value="Studies">Studies</option>
         </select>
         <button type="submit">Create a task</button>
       </form>
