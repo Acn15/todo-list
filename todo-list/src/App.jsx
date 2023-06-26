@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Todo from "./components/Todo";
 import TaskForm from "./components/TaskForm";
+import Search from "./components/Search";
 
 function App() {
   const [all, setAll] = useState([
@@ -25,6 +26,8 @@ function App() {
     },
   ]);
 
+  const [search, setSearch] = useState("");
+
   const addTask = (text, category) => {
     const newAlls = [
       ...all,
@@ -43,21 +46,33 @@ function App() {
     const filteredAlls = newAlls.filter((item) =>
       item.id !== id ? item : null
     );
-    setAll(filteredAlls)
+    setAll(filteredAlls);
   };
 
   const completeTask = (id) => {
     const newAlls = [...all];
-    newAlls.map((item) => item.id === id ?  item.isCompleted = !item.isCompleted : item)
+    newAlls.map((item) =>
+      item.id === id ? (item.isCompleted = !item.isCompleted) : item
+    );
     setAll(newAlls);
   };
   return (
     <div className="app">
       <h1>To Do List </h1>
+      <Search search={search} setSearch={setSearch} />
       <div className="todo-list">
-        {all.map((item) => (
-          <Todo key={item.id} item={item} removeTask={removeTask} completeTask={completeTask}/>
-        ))}
+        {all
+          .filter((item) =>
+            item.text.toLowerCase().includes(search.toLowerCase())
+          )
+          .map((item) => (
+            <Todo
+              key={item.id}
+              item={item}
+              removeTask={removeTask}
+              completeTask={completeTask}
+            />
+          ))}
       </div>
       <TaskForm addTask={addTask} />
     </div>
