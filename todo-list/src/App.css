@@ -1,8 +1,8 @@
 body {
-  font-family: Arial;
+  font-family: Arial bold;
   background-color: white;
   padding: 30px;
-  color: aqua;
+  color: #000000;
   background-image: url(./img/pngwing.com.png);
   background-size: cover;
 }
@@ -10,7 +10,8 @@ body {
 .app {
   max-width: 600px;
   margin: 0 auto 300px;
-  background-color: blueviolet;
+  background-color: #A9A9A9;
+  opacity: 0.9;
   padding: 20px 30px;
   border-radius: 10px;
 }
@@ -32,11 +33,12 @@ input {
 }
 
 button {
-  background-color: brown;
+  background-color: #00008B;
   color: #fff;
   border: none;
   border-radius: 3px;
   cursor: pointer;
+  height: 20px;
   opacity: 0.8;
   margin-right: 10px;
   transition: 0.3s;
@@ -53,20 +55,20 @@ button:hover {
 }
 
 .todo {
-  background-color: blue;
-  box-shadow: 0 0 10px black;
+  background-color: #A9A9A9;
+  box-shadow: 0 0 10px #000000;
   padding: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   display: flex;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   align-items: center;
 }
 .complete {
-  background-color: green;
+  background-color: #32CD32;
 }
 .remove {
-  background-color: #d953af;
+  background-color: #FF0000;
 }
 .task-form {
   padding-bottom: 1.5rem;
@@ -79,4 +81,10 @@ select {
   border: 1px solid #ddd;
   border-radius: 3px;
   width: 100%;
+}
+
+.search {
+  border-bottom: 1px solid #555;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
 }
